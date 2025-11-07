@@ -1,0 +1,9 @@
+base: rust:slim-trixie
+track: main
+
+steps:
+  - name: Checkout repo
+    use: cythe-checkout
+
+  - name: Run tests
+    run: cargo test --verbose
