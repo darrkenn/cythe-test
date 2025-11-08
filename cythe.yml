@@ -11,5 +11,8 @@ steps:
   - name: Build
     run: cargo build --release
 
+  - name: What
+    run: ls target/release/
+
   - name: Run
     entrypoint: ./target/release/cythe-test
