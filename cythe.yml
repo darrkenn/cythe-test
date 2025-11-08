@@ -9,7 +9,4 @@ steps:
     run: cargo build --release
 
   - name: Run
-    run: ./target/release/cythe
-
-  - name: Hello
-    run: ls
+    entrypoint: ./target/release/cythe
