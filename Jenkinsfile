@@ -13,6 +13,12 @@ pipeline {
                 echo "Running tests..."
             }
         }
+
+        stage('a') {
+            steps {
+                cargo run
+              }
+          }
         
         stage('Deploy') {
             steps {
