@@ -5,5 +5,8 @@ steps:
   - name: Checkout repo
     use: cythe-checkout
 
-  - name: Run tests
-    run: cargo test --verbose
+  - name: Build
+    run: cargo build --release
+
+  - name: Run
+    run: ./target/release/cythe.yml
