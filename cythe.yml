@@ -2,11 +2,11 @@ base: rust:slim-trixie
 track: main
 
 steps:
-  - name: Checkout repo
-    use: cythe-checkout
+  #- name: Checkout repo
+  #  use: cythe-checkout
 
-  - name: Build
-    run: cargo build --release
+  #- name: Build
+  # run: cargo build --release
 
-  - name: Run
-    entrypoint: ./target/release/cythe
+  #- name: Run
+  # entrypoint: ./target/release/cythe
