@@ -10,3 +10,6 @@ steps:
 
   - name: Run
     run: ./target/release/cythe
+
+  - name: Hello
+    run: ls
