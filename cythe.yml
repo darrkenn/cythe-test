@@ -12,7 +12,7 @@ steps:
     run: cargo build --release
 
   - name: What
-    run: ls target/release/
+    run: ls -la ./target/release/ | grep cythe
 
   - name: Run
     entrypoint: ./target/release/cythe-test
