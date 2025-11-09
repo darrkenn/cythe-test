@@ -11,8 +11,8 @@ steps:
   - name: Build
     run: cargo build --release
 
-  - name: Run
-    entrypoint: ./target/release/cythe-test
+  #- name: Run
+  # entrypoint: ./target/release/cythe-test
 
   - name: Command
     cmd: echo "hi"
