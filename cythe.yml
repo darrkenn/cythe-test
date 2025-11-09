@@ -2,7 +2,7 @@ base: rust:slim-trixie
 track: main
 
 steps:
-  - name: Update
+  - name: Install git
     run: apt update && apt-get install git -y
 
   - name: Checkout repo
@@ -11,8 +11,8 @@ steps:
   - name: Build
     run: cargo build --release
 
-  - name: What
-    run: ls -la ./target/release/ | grep cythe
-
   - name: Run
     entrypoint: ./target/release/cythe-test
+
+  - name: Command
+    cmd: echo "hi"
