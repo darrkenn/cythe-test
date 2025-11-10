@@ -6,3 +6,23 @@ fn main() -> std::io::Result<()> {
     file.write_all(b"Hello")?;
     Ok(())
 }
+
+fn evaluate(value1: bool, value2: bool) -> bool {
+    if value1 == value2 {
+        return true;
+    };
+    false
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_evaluate_true() {
+        assert!(evaluate(true, true))
+    }
+    #[test]
+    fn test_evaluate_false() {
+        assert!(!evaluate(true, false))
+    }
+}
