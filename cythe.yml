@@ -3,10 +3,10 @@ track: main
 
 steps:
   - name: Install git
-    run: apt update && apt-get install git -y
+    run: apt install git -y
 
   - name: Checkout repo
     use: cythe-checkout
 
   - name: Build
-    run: cargo build --release
+    run: cargo test
