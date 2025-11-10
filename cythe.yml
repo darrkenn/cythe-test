@@ -1,10 +1,10 @@
 base: rust:slim-trixie
 track: main
 
-build_steps:
+build:
   - use: cythe-checkout
   - run: cargo build --release
-run_steps:
+run:
   - name: Cargo test
     run: cargo test
   - name: Run program
