@@ -1,12 +1,14 @@
 base: rust:slim-trixie
 track: main
 
-steps:
-  - name: Install git
-    run: apt install git -y
-
-  - name: Checkout repo
-    use: cythe-checkout
-
-  - name: Build
-    run: cargo test
+build:
+  steps:
+    - use: cythe-checkout
+    - run: cargo build --release
+run:
+  steps:
+    - name: Cargo test
+      run: cargo test
+    - name: Run program
+      run: ./target/release/cythe-test
+      use: cythe-checkout
