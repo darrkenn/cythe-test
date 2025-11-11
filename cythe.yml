@@ -2,8 +2,10 @@ base: rust:slim-trixie
 track: main
 
 steps:
+  - name: Update
+    run: apt update && apt upgrade
   - name: Install git
-    run: apt update && install git -y
+    run: apt install -y git
   - name: Checkout
     use: cythe-checkout
 
