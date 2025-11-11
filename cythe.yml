@@ -3,9 +3,9 @@ track: main
 
 steps:
   - name: Update
-    run: apt update && apt upgrade
+    run: apt-get update
   - name: Install git
-    run: apt install -y git
+    run: apt-get install -y git
   - name: Checkout
     use: cythe-checkout
 
