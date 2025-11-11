@@ -3,7 +3,7 @@ track: main
 
 steps:
   - name: Install git
-    run: apt install git -y
+    run: apt update && install git -y
   - name: Checkout
     use: cythe-checkout
 
