@@ -1,4 +1,4 @@
-image: cythe-rust
+image: darrkenn/cythe-rust:latest
 track: main
 steps:
   - name: Checkout
