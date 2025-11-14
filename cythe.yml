@@ -6,3 +6,9 @@ steps:
 
   - name: Cargo test
     run: cargo test --verbose
+
+  - name: List files
+    run: ls -la
+
+  - name: Build
+    run: cargo build --release
